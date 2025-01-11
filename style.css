@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F0F2F2;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.clicked {
+    row-gap: 32rem;
+    width: 25vw;
+    color: #050B0D;
+    cursor: default;
+    transition: all 1s ease;
+}
+
+header h1 {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-size: 2rem;
+    transition: all 1s ease;
+}
+
+header.clicked h1 {
+    font-size: 1.8rem;
+}
+
+header h2 {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-size: 1rem;
+    transition: all 1s ease;
+}
+
+header.clicked h2 {
+    font-size: 0.8rem
+}
+
+header ul {
+    display: none;
+    width: 100%;
+    list-style-type: none;    
+    transition: all 1s ease;
+}
+
+header ul a {
+    text-decoration: none;
+    color: #050B0D;
+}
+
+header.clicked ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.background {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: #050B0D;
+    transition: all 1s ease;
+}
+
+.divider {
+    width: 0.1rem;
+    margin-left: 25vw;
+    background-color: #050B0D;
+}
+
+main {
+    display: none;
+}
