@@ -2,10 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 1s ease;
 }
 
 body {
     background-color: #F0F2F2;
+}
+
+a {
+    text-decoration: none;
+    color: #050B0D;
 }
 
 header {
@@ -21,7 +27,6 @@ header {
     height: 100vh;
     color: white;
     cursor: pointer;
-    transition: all 1s ease;
 }
 
 .clicked {
@@ -29,14 +34,12 @@ header {
     width: 25vw;
     color: #050B0D;
     cursor: default;
-    transition: all 1s ease;
 }
 
 header h1 {
     font-family: "Poppins", serif;
     font-weight: 500;
     font-size: 2rem;
-    transition: all 1s ease;
 }
 
 header.clicked h1 {
@@ -47,7 +50,6 @@ header h2 {
     font-family: "Poppins", serif;
     font-weight: 300;
     font-size: 1rem;
-    transition: all 1s ease;
 }
 
 header.clicked h2 {
@@ -58,12 +60,6 @@ header ul {
     display: none;
     width: 100%;
     list-style-type: none;    
-    transition: all 1s ease;
-}
-
-header ul a {
-    text-decoration: none;
-    color: #050B0D;
 }
 
 header.clicked ul {
@@ -76,7 +72,6 @@ header.clicked ul {
     width: 100vw;
     height: 100vh;
     background-color: #050B0D;
-    transition: all 1s ease;
 }
 
 .divider {
@@ -87,4 +82,25 @@ header.clicked ul {
 
 main {
     display: none;
+}
+
+@media (max-width: 768px) {
+    header.clicked div {
+        width: 10rem;
+        transform: rotate(-90deg);
+    }
+
+    header.clicked h1 {
+        font-size: 1rem;
+    }
+
+    header.clicked h2 {
+        font-size: 0.5rem;
+    }
+
+    header.clicked ul {
+        flex-direction: column;
+        align-items: center;
+        height: 5rem;
+    }
 }
