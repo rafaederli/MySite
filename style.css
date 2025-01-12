@@ -6,6 +6,8 @@
 }
 
 body {
+    display: flex;
+    flex-direction: row;
     background-color: #F0F2F2;
 }
 
@@ -75,6 +77,9 @@ header.clicked ul {
 }
 
 .divider {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 0.1rem;
     margin-left: 25vw;
     background-color: #050B0D;
@@ -82,6 +87,53 @@ header.clicked ul {
 
 main {
     display: none;
+}
+
+.visible {
+    display: block;
+    width: 75vw;
+    height: 100vh;
+    margin-left: 30vw;
+    padding-top: 2rem;
+    padding-right: 2rem;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 100%;
+    background-color: #050B0D;
+    padding: 1rem;
+    box-shadow: 0.5rem 0.5rem 0.8rem rgba(0, 0, 0, 0.2)
+}
+
+article a {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    color: white;
+}
+
+article p {
+    width: 100%;
+    height: 2.8rem;
+    text-align: justify;
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: white;
+}
+
+article img {
+    max-width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -102,5 +154,14 @@ main {
         flex-direction: column;
         align-items: center;
         height: 5rem;
+    }
+
+    section {
+        grid-template-columns: 1fr;
+    }
+
+    article p {
+        height: 5rem;
+        font-size: 0.8rem;
     }
 }
